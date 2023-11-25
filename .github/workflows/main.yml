@@ -24,9 +24,6 @@ jobs:
       with: 
         username: ${{ secrets.docker_username }}
         password: ${{ secrets.docker_password }}
-        registry: 'https://docker.io'
-        ecr: auto
-        logout: true
         
     - name: Docker push
       run: docker push sophie1300/github-docker:${{ github.run_number }}
