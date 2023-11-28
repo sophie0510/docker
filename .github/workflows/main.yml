@@ -18,7 +18,8 @@ jobs:
     - name: Tagging docker image
       run: |
         
-        docker tag docker_image:latest sophie1300/docker-git:${{ github.run_number }} sophie1300/docker-git:latest
+        docker tag docker_image:latest sophie1300/docker-git:${{ github.run_number }} 
+        docker tag docker_image:latest sophie1300/docker-git:latest
 
     - name: Docker login
       uses: docker/login-action@v3.0.0
